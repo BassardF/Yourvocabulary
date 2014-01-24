@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='/stylesheets/common.css' />
+        <link rel='stylesheet' href='/stylesheets/base.css' />
+    </head>
+    <body>        
+      
+
+      <div class="container">
+
+      <div class="masthead">
+        <h3 class="text-muted">Welcome <span id="login"><%= login %></span></h3>
+        <a id="disconnect" class="btn btn-primary" href="/disconnect" role="button">Disconnect</a>
+        <ul class="nav nav-justified">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="word">New word</a></li>
+          <li><a href="lists">Your lists</a></li>
+          <li><a href="stats">Your stats</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Vocab Sheets</h1>
+        <p class="lead">Welcome into your new home, from here you can use every feature provided by this tool. Good luck and have fun improving your favorite foreign language.</p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Add new words</h2>
+          <p>The best and easiest way to improve your vocabulary. Find the words your are looking for, in your favorite language. Customise the translation proposal and record it. Your curstomised translation is stored into your account. You are free to consult all your words at any time.</p>
+          <p><a class="btn btn-primary" href="/word" role="button">Add words</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Remember</h2>
+          <p>Because most of us don't every new word the first time you cross it. your may look to all your stored translation. Enjoy the sorting system and build a solid vocabulary, keep everything active in your mind.</p>
+          <p><a class="btn btn-primary" href="/lists" role="button">Consult your lists</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Follow yourself</h2>
+          <p>Are you really checking your lists ? how many words you lists contains ? in which language ? Enjoy statistic featuress, to follow your learning style, to improve your approach. Every data is calculated on the fly, none of these stats are stored.</p>
+          <p><a class="btn btn-primary" href="/stats" role="button">Analyze your stats</a></p>
+        </div>
+      </div>
+
+    </div>
+        <script src='/bower_components/modernizr/modernizr.js'></script>
+        <script src='/bower_components/jquery/jquery.js'></script>
+        <script src='/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+        <script src='/javascripts/base.js'></script>   
+    </body>
+</html>

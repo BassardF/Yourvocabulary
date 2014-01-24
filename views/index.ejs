@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='/stylesheets/index.css' />
+        
+    </head>
+    <body>        
+      
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="jumbotron">
+            <h1>Vocab Sheets</h1>
+            <p class="lead">Every word you need, automatically translated and stored. Easy to use vocabulary sheets in your favourite language.</p>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div id="signform">
+          <form class="form-signin" role="form" action="/login" method="post">
+            <label for="login">Login</label>
+            <input id="login" type="text" name="login" class="form-control" placeholder="Login" required autofocus>
+            <label for="password">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
+            <input id="connectButton" class="btn btn-lg btn-primary btn-block" type="submit" name="connexion" value="Connexion">
+            <a href="/register" class="btn btn-lg btn-primary btn-block">Register</a>
+          </form>
+        </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="row" id="alertArea">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+        <script src='/bower_components/modernizr/modernizr.js'></script>
+        <script src='/bower_components/jquery/jquery.js'></script>
+        <script src='/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+        <script src='/javascripts/index.js'></script>         
+    </body>
+</html>

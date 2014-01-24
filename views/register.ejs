@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='/stylesheets/register.css' />
+
+    </head>
+    <body>        
+      
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="jumbotron">
+            <h1>Register</h1>
+            <p class="lead">We don't ask for private information here :)</p>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div id="signform">
+          <form class="form-signin" role="form" action="/register/register" method="post">
+            <label for="mail">Mail address</label>
+            <input id="mail" type="email" name="mail" class="form-control" placeholder="Mail" required autofocus>
+            <label for="login">Login</label>
+            <input id="login" type="text" name="login" class="form-control" placeholder="Login" required autofocus>
+            <label for="password">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
+            <label for="pass_confirm">Password double check</label>
+            <input id="pass_confirm" type="password" class="form-control" placeholder="Password repeat" name="pass_confirm" required>
+            <input id="register" class="btn btn-lg btn-primary btn-block" type="submit" name="register" value="Register">
+          </form>
+        </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="row" id="alertArea">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+        <script src='/bower_components/modernizr/modernizr.js'></script>
+        <script src='/bower_components/jquery/jquery.js'></script>
+        <script src='/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+        <script src='/javascripts/register.js'></script>
+    </body>
+</html>

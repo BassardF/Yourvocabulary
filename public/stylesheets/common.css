@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Custom";
+    src: url(fonts/Audiowide/Audiowide-Regular) format("truetype");
+}
+
+body {
+  padding-top: 20px;
+  font-family: "Custom", Verdana, Tahoma;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}
+
+.jumbotron h1 {
+    color: #E74C3C;
+}
+
+.jumbotron p {
+    opacity: 0.5;
+}
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+.nav-justified {
+  background-color: #eee;
+}
+.nav-justified > li > a {
+  margin-bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #777;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ECF0F1;
+}
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+  background-color: #F6F9F8;
+  background-image: none;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-justified > li > a {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+  }
+  .nav-justified > li:last-child > a {
+    border-right: 0;
+  }
+}
+
+.text-muted, #disconnect{
+  display: inline-block;
+}
+
+#disconnect{
+  float: right;
+  margin-top: 10px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.btn{
+  border-radius: 0px;
+  border: none;  
+  background-color: #3498DB;
+}
+
+.form-control{
+  border-radius: 0px;
+  border: solid 1px #ECF0F1;
+  -webkit-box-shadow: none;
+  box-shadow: inset none;
+}

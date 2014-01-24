@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='/stylesheets/common.css' />
+        <link rel='stylesheet' href='/stylesheets/word.css' />
+
+    </head>
+    <body>        
+      
+      <div class="container">
+
+      <div class="masthead">
+        <h3 class="text-muted">Hi <span id="login"><%= login %></span>, pick a word !</h3>
+        <a id="disconnect" class="btn btn-primary" href="/disconnect" role="button">Disconnect</a>
+        <ul class="nav nav-justified">
+          <li><a href="base">Home</a></li>
+          <li class="active"><a href="#">New word</a></li>
+          <li><a href="lists">Your lists</a></li>
+          <li><a href="stats">Your stats</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <label for="origin">Input language</label>
+          <select id="origin" class="form-control">
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="destination">Destination language</label>
+          <select id="destination" class="form-control">
+          </select>     
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+        <label for="word">Your word</label>
+          <input type="text" class="form-control" id="word" placeholder="Chose your word">
+          <label for="result">Result</label>
+          <textarea id="result" class="form-control" rows="3"></textarea>
+          <button id="translate" type="button" class="btn btn-primary">Translate</button> 
+          <button id="store" type="button" class="btn btn-primary">Store</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div id="alerArea" class="alert alert-warning">
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+        <script src='/bower_components/modernizr/modernizr.js'></script>
+        <script src='/bower_components/jquery/jquery.js'></script>
+        <script src='/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+        <script src='/javascripts/word.js'></script>
+    </body>
+</html>

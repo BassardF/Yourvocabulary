@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='/stylesheets/common.css' />
+        <link rel='stylesheet' href='/stylesheets/about.css' />
+
+    </head>
+    <body>        
+      
+
+      <div class="container">
+
+        <div class="masthead">
+          <h3 class="text-muted">Hi <span id="login"><%= login %></span></h3>
+          <a id="disconnect" class="btn btn-primary" href="/disconnect" role="button">Disconnect</a>
+          <ul class="nav nav-justified">
+            <li><a href="base">Home</a></li>
+            <li><a href="word">New word</a></li>
+            <li><a href="lists">Your lists</a></li>
+            <li><a href="stats">Your stats</a></li>
+            <li class="active"><a href="#">About</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="row" id="aboutContent">
+          <div class="col-md-12">
+            <div class="bs-example bs-example-tabs">
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#Why" data-toggle="tab">Why</a></li>
+                <li><a href="#How" data-toggle="tab">How</a></li>
+                <li><a href="#Where" data-toggle="tab">Where</a></li>
+                <li><a href="#More" data-toggle="tab">More</a></li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="Why">
+                  <p>The why is always the first question. Why should you use this application ?</p>
+                  <p>The awnser is simple, this application is: <br> - Usefull <br> - Simple and easy to use <br> - Fully open <br> - Doesn't require any private information</p>
+                  <p>Because it is so important nowadays to builds strong foreign languagues, based on a solid vocabulary. 
+                  <br>And this application is the perfect way to improve quickly your skills in any supported language while reading a book or watching a movie.
+                  <br>Make the choice to benefit from every encounter, on the long-term.</p>
+                </div>
+                <div class="tab-pane fade" id="How">
+                  <p>This application has been made to be simple and contains only 3 main features.</p>
+                  <h3>Add a new word/translation</h3>
+                  <p>To add a new word, click on the the "new word" label on the top bar (<a href="word.php">or here</a>). Then chose the languages, and type in your word.</p>
+                  <p>You can try an automatic translation or just type in your own.</p>
+                  <p>If you have chosen the automatic way, you still can modify the proposal.</p>
+                  <p>Finally, if you want to store it, just press the store button.</p>
+                  <h3>Check your registred words</h3>
+                  <p>Press the "your lists" button on the top bar(<a href="liste.php">or here</a>).</p>
+                  <p>Every word you stored should be displayed, sorted by langagues</p>
+                  <h3>Look at some statistics</h3>
+                  <p>Because statistics could help you improving your learning system, just click on the "Your stats" button (<a href="stats.php">or here</a>).</p>
+                  <p>Every known data is calculated and provided.</p>                 
+                </div>
+                <div class="tab-pane fade" id="Where">
+                 <p>This tool is only in his early days, and only the responsive web version is available.</p>
+                 <p>Whe try to provide the mobile ones as soon as possible.</p>
+                </div>
+                <div class="tab-pane fade" id="More">
+                  <p>For any further information, you can click on the "Contact" button (<a href="contact.php">or here</a>) and directly ask your question.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <script src='/bower_components/modernizr/modernizr.js'></script>
+        <script src='/bower_components/jquery/jquery.js'></script>
+        <script src='/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+        <script src='/javascripts/about.js' ></script>
+    </body>
+</html>

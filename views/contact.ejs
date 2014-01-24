@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='/stylesheets/common.css' />
+        <link rel='stylesheet' href='/stylesheets/contact.css' />
+
+    </head>
+    <body>        
+      
+
+      <div class="container">
+
+        <div class="masthead">
+          <h3 class="text-muted">Hi <span id="login"><%= login %></span></h3>
+          <a id="disconnect" class="btn btn-primary" href="/disconnect" role="button">Disconnect</a>
+          <ul class="nav nav-justified">
+            <li><a href="base">Home</a></li>
+            <li><a href="word">New word</a></li>
+            <li><a href="lists">Your lists</a></li>
+            <li><a href="stats">Your stats</a></li>
+            <li><a href="about">About</a></li>
+            <li class="active"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>E-Mail</h3>
+            <p>Because good old stuff is often the way to go</p>
+            <p><a href="mailto:f.bassard@gmail.com?subject= About your vocabulary">My Mail</a></p>
+            <h3>Twitter</h3>
+            <p>Twitter is another way to share my daily thoughts, finds and ideas. So it's not only speaking about computing. However, I like to share every usefull tool and funny thing that I can find.</p>
+            <p>The rest is mostly about photo and sport. Sometimes about competitive gaming.</p>
+            <p><a href="https://twitter.com/MyRulz89">My Twitter</a></p>
+            <h3>LinkedIn</h3>
+            <p>If you want to check a little more about me. Some professional networks to get informations.</p>
+            <p><a href="http://www.linkedin.com/in/frankbassard">My LinkedIn</a></p>
+          </div>
+        </div>
+
+      </div>
+
+        <script src='/bower_components/modernizr/modernizr.js'></script>
+        <script src='/bower_components/jquery/jquery.js'></script>
+        <script src='/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+        <script src='/javascripts/contact.js'></script>   
+    </body>
+</html>

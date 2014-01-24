@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+        <link rel='stylesheet' href='/stylesheets/common.css' />
+        <link rel='stylesheet' href='/stylesheets/lists.css' />
+
+    </head>
+    <body>    
+    
+    <div class="container">
+
+      <div class="masthead">
+        <h3 class="text-muted">Hi <span id="login"><%= login %></span></h3>
+        <a id="disconnect" class="btn btn-primary" href="/disconnect" role="button">Disconnect</a>
+        <ul class="nav nav-justified">
+          <li><a href="base">Home</a></li>
+          <li><a href="word">New word</a></li>
+          <li class="active"><a href="#">Your lists</a></li>
+          <li><a href="stats">Your stats</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="row" id="botRow">
+      <div id="alerArea" class="alert alert-warning"></div>
+        <div class="col-md-3">
+          <ul class="list-group" id="summary">
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="panel-group" id="accordion">
+        
+          </div>          
+        </div>
+      </div>
+
+      <div id="loading">
+        <img src="/images/loading.gif"/>
+      </div>
+
+    </div>
+        <script src='/bower_components/modernizr/modernizr.js'></script>
+        <script src='/bower_components/jquery/jquery.js'></script>
+        <script src='/bower_components/bootstrap/dist/js/bootstrap.js'></script>
+        <script src='/javascripts/lists.js'> </script>
+    </body>
+</html>

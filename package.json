@@ -1,0 +1,21 @@
+{
+  "name": "yourvocabulary",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.8",
+    "ejs": "*",
+    "stylus": "*",
+    "socket.io": "*",
+    "lodash": "*",
+    "bower": "*",
+    "mysql": "*"
+  },
+  "devDependencies": {
+    "gulp-util": "~2.2.12",
+    "gulp": "~3.4.0"
+  }
+}

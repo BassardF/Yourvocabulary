@@ -1,0 +1,24 @@
+body {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#alertArea{
+	margin-top: 20px;
+}
+
+button, input{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  margin-bottom: 0px;
+}
+
+#connectButton{
+	margin-top: 20px;
+}
