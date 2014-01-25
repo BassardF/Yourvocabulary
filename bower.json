@@ -15,9 +15,8 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "README.md",
+    "LICENSE"
   ],
   "dependencies": {
     "bootstrap": "*",
