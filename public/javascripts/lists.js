@@ -75,6 +75,7 @@ var sortAndAddList = function(data){
     addAList(++num, liste);
   }
   $("#loading").hide();
+  $("#summary > li:first-child").click();
 }
 
 var getListRequest = function(){

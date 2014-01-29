@@ -18,9 +18,9 @@ function setNumbersOfChart(tab){
     var sum = 0,
         pattern = "<p>{libelle} : {value}</p>";
     for(var num in tab){
-        var dom = pattern.replace("{libelle}", tab[num].name).replace("{value}", tab[num].y);
+        var dom = pattern.replace("{libelle}", tab[num][0]).replace("{value}", tab[num][1]);
         $("#nowValues").append(dom);
-        sum += tab[num].y;
+        sum += tab[num][1];
     }    
     var total = pattern.replace("{libelle}", "Total").replace("{value}", sum);
     $("#nowValues").append(total);

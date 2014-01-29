@@ -1,25 +1,28 @@
-#botRow{
-	margin-top: 50px;
+#botRow {
+  margin-top: 50px;
 }
-
-#alerArea{
-	display: none;
+#alerArea {
+  display: none;
 }
-
-.panel-default{
-	display: none;
+.panel-default {
+  display: none;
 }
-
-.list-group-item:hover{
-	cursor: pointer;
+.list-group-itemhover {
+  cursor: pointer;
 }
-
-#loading{
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
+#loading {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 }
-
-#loading img{
-	width: 200px;
+#loading img {
+  width: 200px;
+}
+.list-group-item:hover {
+  background-color: #3db1ff;
+  cursor: pointer;
+}
+.list-group-item:hover .badge {
+  background-color: #fff;
+  color: #000;
 }

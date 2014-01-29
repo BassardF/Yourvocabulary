@@ -68,6 +68,7 @@ var setEvents = function(){
 			origin = languages[$("#origin").val()],
 			destination = languages[$("#destination").val()];
 		storeTranslation(login, text, translation, origin, destination);
+		$("#word, #result").val("");
 	});
 }
 

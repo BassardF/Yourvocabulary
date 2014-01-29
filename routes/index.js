@@ -8,7 +8,14 @@ exports.index = function(req, res){
 };
 
 exports.register = function(req, res){
-  res.render('register.ejs');
+	var level = req.session.errorLvl || 'none';
+	var message = req.session.errorMessage || '';
+	req.session.errorLvl = 'none';
+	req.session.errorMessage = '';
+  res.render('register.ejs', {
+  		errorLvl : level,
+  		errorMsg : message
+  	});
 };
 
 exports.base = function(req, res){

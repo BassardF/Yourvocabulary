@@ -1,16 +1,16 @@
 body {
-	margin-left: 20px;
-	margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-
-#alertArea{
-	margin-top: 20px;
+#alertArea {
+  margin-top: 20px;
 }
-
-#register{
-	margin-top: 20px;
+#alertArea p {
+  padding: 10px;
 }
-
+#register {
+  margin-top: 20px;
+}
 .jumbotron {
   text-align: center;
   background-color: transparent;

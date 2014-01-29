@@ -1,18 +1,15 @@
-#alertArea{
-	display: none;
-	margin-top: 20px;
+#alertArea {
+  display: none;
+  margin-top: 20px;
 }
-
-.masthead{
-	margin-bottom: 20px;
+.masthead {
+  margin-bottom: 20px;
 }
-
-#loading{
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
+#loading {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 }
-
-#loading img{
-	width: 200px;
+#loading img {
+  width: 200px;
 }

@@ -47,6 +47,18 @@
       <div class="row" id="alertArea">
         <div class="col-md-4"></div>
         <div class="col-md-4">
+	        <% if(errorLvl == 'success'){ %>
+        	<p class=" alert-success"><%= errorMsg %></p>
+        	<% } %>
+        	<% if(errorLvl == 'info'){ %>
+        	<p class=" alert-info"><%= errorMsg %></p>
+        	<% } %>
+        	<% if(errorLvl == 'warning'){ %>
+        	<p class=" alert-warning"><%= errorMsg %></p>
+        	<% } %>
+        	<% if(errorLvl == 'error'){ %>
+        	<p class=" alert-danger"><%= errorMsg %></p>
+        	<% } %>
         </div>
         <div class="col-md-4"></div>
       </div>
