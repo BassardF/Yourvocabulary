@@ -27,7 +27,9 @@ var addNav = function(id, badge, title){
   pattern = pattern.replace("{id}",id).replace("{badge}",badge).replace("{title}",title);
   $("#summary").append(pattern);
   $("#"+id).click(function(){
-    $(".panel-default").hide();
+    $('.selected-menu').removeClass('selected-menu');
+    $("#"+id).addClass('selected-menu');
+    $('.panel-default').hide();
     $("#"+title.replace(/\s/g, "-")).show();
   });
 }

@@ -26,3 +26,11 @@
   background-color: #fff;
   color: #000;
 }
+.selected-menu {
+  background-color: #3db1ff;
+  cursor: pointer;
+}
+.selected-menu .badge {
+  background-color: #fff;
+  color: #000;
+}
