@@ -121,9 +121,15 @@ app.post('/register/register', function(req, res){
 
 app.post('/lists/wordLists', mysqlRequests.wordLists);
 
+app.post('/lists/deleteWord', mysqlRequests.deleteWord);
+
 app.post('/word/addWord', mysqlRequests.addWord);
 
 app.post('/stats/wordNumber', mysqlRequests.wordNumber);
+
+app.post('/register/mailAvailable', mysqlRequests.mailAvailable);
+
+app.post('/register/loginAvailable', mysqlRequests.loginAvailable);
 
 /**
  * Server startup.

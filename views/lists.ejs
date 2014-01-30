@@ -18,8 +18,7 @@
 
       <div class="masthead">
         <h3 class="text-muted">Hi <span id="login"><%= login %></span></h3>
-        <a id="disconnect" class="btn btn-primary" href="/disconnect" role="button">Disconnect</a>
-        <ul class="nav nav-justified">
+        <ul class="nav nav-justified navbar-fixed-top">
           <li><a href="base">Home</a></li>
           <li><a href="word">New word</a></li>
           <li class="active"><a href="#">Your lists</a></li>
@@ -45,6 +44,25 @@
       <div id="loading">
         <img src="/images/loading.gif"/>
       </div>
+
+      <div id="delete-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Delete a word</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete</p>
+        <p><span id="word-to-delete"></span> : <span id="translation-to-delete"></span></p>
+        <p class="hidden"><span id="origin-to-delete"></span><span id="destination-to-delete"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="delete-button" class="btn btn-primary">delete</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
         <script src='/bower_components/modernizr/modernizr.js'></script>

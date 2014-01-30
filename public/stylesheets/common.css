@@ -3,7 +3,7 @@
   src: url("fonts/Nunito/Nunito-Regular.ttf") format("truetype");
 }
 body {
-  padding-top: 20px;
+  padding-top: 50px;
   font-family: "Custom", Verdana, Tahoma;
 }
 .footer {
@@ -94,6 +94,9 @@ body {
 }
 .badge {
   color: #fff;
+}
+.text-muted {
+  display: none;
 }
 .panel-default > .panel-heading {
   background-color: #3498db;

@@ -12,7 +12,7 @@ exports.register = function(req, res){
 	var message = req.session.errorMessage || '';
 	req.session.errorLvl = 'none';
 	req.session.errorMessage = '';
-  res.render('register.ejs', {
+  	res.render('register.ejs', {
   		errorLvl : level,
   		errorMsg : message
   	});

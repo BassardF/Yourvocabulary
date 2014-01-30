@@ -70,6 +70,14 @@ var setEvents = function(){
 		storeTranslation(login, text, translation, origin, destination);
 		$("#word, #result").val("");
 	});
+	$(document).keypress(function(e) {
+	    if(e.which == 13) {
+	    	if($("*:focus")[0] && $("*:focus")[0].id === "word"){
+	    		$("#translate").click();	    		
+	    	}
+	    }
+	});
+	
 }
 
 // Dom loaded

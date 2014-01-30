@@ -54,7 +54,7 @@
  	if(!req.body.login || !req.body.mail || !req.body.password || req.body.password !== req.body.pass_confirm){
  		
  		req.session.errorLvl = 'error';
- 		req.Session.errorMessage = 'missing field';
+ 		req.session.errorMessage = 'missing field';
  		res.redirect('/register');
  	
  	} else {
@@ -79,6 +79,60 @@
  			} else {
  				res.redirect('/');
  			}
+ 			
+ 		});
+ 		
+ 		connection.end();
+ 		
+ 	}
+ };
+ 
+ /*
+ * Check if a mail is available
+ */
+ 
+ exports.mailAvailable = function(req, res){
+ 	
+ 	if(req.body.mail){
+ 		
+ 		var	connection = mysql.createConnection(databaseConf);
+ 		
+ 		connection.connect();
+ 		
+ 		var reqTemplate = 'SELECT count(id) as number FROM membre WHERE mail = ?';
+ 		var request = mysql.format(reqTemplate, [req.body.mail]);
+ 		
+ 		connection.query(request, function(err, rows, fields){
+ 			
+ 			res.set('Content-Type', 'application/json');
+ 			res.send(200, JSON.stringify(rows));
+ 			
+ 		});
+ 		
+ 		connection.end();
+ 		
+ 	}
+ };
+
+/*
+ * Check if a login is available
+ */
+ 
+ exports.loginAvailable = function(req, res){
+ 	
+ 	if(req.body.login){
+ 		
+ 		var	connection = mysql.createConnection(databaseConf);
+ 		
+ 		connection.connect();
+ 		
+ 		var reqTemplate = 'SELECT count(id) as number FROM membre WHERE login = ?';
+ 		var request = mysql.format(reqTemplate, [req.body.login]);
+ 		
+ 		connection.query(request, function(err, rows, fields){
+ 			
+ 			res.set('Content-Type', 'application/json');
+ 			res.send(200, JSON.stringify(rows));
  			
  		});
  		
@@ -151,6 +205,41 @@
  	
  };
 
+/*
+ * Delete a given translation to a given user
+ */
+ 
+ exports.deleteWord = function(req, res){
+ 	
+ 	if(req.body.text && req.body.translation && req.body.origin && req.body.destination && req.session.membreId){
+ 		
+ 		var	connection = mysql.createConnection(databaseConf);
+ 		
+ 		connection.connect();
+ 		
+ 		var reqTemplate = 'DELETE FROM words WHERE text = ? and translation = ? and origin = ? and destination = ? and membre = ?';
+ 		var request = mysql.format(reqTemplate, [req.body.text, req.body.translation, req.body.origin, req.body.destination, req.session.membreId]);
+ 		
+ 		connection.query(request, function(err, rows, fields){
+ 			
+ 			if(err){
+		 		res.set('Content-Type', 'application/json');
+		 		res.send(200, JSON.stringify("error"));
+ 			} else{
+		 		res.set('Content-Type', 'application/json');
+		 		res.send(200, JSON.stringify("success"));
+ 			}
+ 			
+ 		});
+ 		
+ 		connection.end();
+ 	} else {
+ 		res.set('Content-Type', 'application/json');
+ 		res.send(200, JSON.stringify("error"));
+ 	}
+ 	
+ };
+ 
 /*
  * Number of words by languages
  */

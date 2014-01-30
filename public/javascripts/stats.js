@@ -16,14 +16,15 @@ var languages = {
 // Fill linked data
 function setNumbersOfChart(tab){
     var sum = 0,
-        pattern = "<p>{libelle} : {value}</p>";
+        pattern = '<tr><td>{num}</td><td>{libelle}</td><td class="value-cell">{value}</td></tr>',
+        totalPattern = '{libelle} : {value}';
     for(var num in tab){
-        var dom = pattern.replace("{libelle}", tab[num][0]).replace("{value}", tab[num][1]);
+        var dom = pattern.replace("{libelle}", tab[num][0]).replace("{value}", tab[num][1]).replace("{num}", num);
         $("#nowValues").append(dom);
         sum += tab[num][1];
     }    
-    var total = pattern.replace("{libelle}", "Total").replace("{value}", sum);
-    $("#nowValues").append(total);
+    var total = totalPattern.replace("{libelle}", "Total").replace("{value}", sum);
+    $("#total").append(total);
 }
 
 // Draw the chart
