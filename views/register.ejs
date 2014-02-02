@@ -29,15 +29,23 @@
         <div class="col-md-4">
           <div id="signform">
           <form class="form-signin" role="form" action="/register/register" method="post">
-            <label for="mail">Mail address</label>
-            <input id="mail" type="email" name="mail" class="form-control" placeholder="Mail" required autofocus>
+            <div id="mail-group" class="form-group">
+                <label for="mail">Mail address</label>
+                <input id="mail" type="email" name="mail" class="form-control" placeholder="Mail" required autofocus>
             <label for="login">Login</label>
-            <input id="login" type="text" name="login" class="form-control" placeholder="Login" required>
-            <label for="password">Password</label>
-            <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
-            <label for="pass_confirm">Password double check</label>
-            <input id="pass_confirm" type="password" class="form-control" placeholder="Password repeat" name="pass_confirm" required>
-            <input id="register" class="btn btn-lg btn-primary btn-block" type="submit" name="register" value="Register">
+            </div>
+            <div id="login-group" class="form-group">
+                <input id="login" type="text" name="login" class="form-control" placeholder="Login" required>
+                <label for="password">Password</label>
+            </div>
+            <div id="pass-group" class="form-group">
+                <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
+                <label for="pass_confirm">Password double check</label>
+            </div>
+            <div id="confirm-group" class="form-group">
+                <input id="pass_confirm" type="password" class="form-control" placeholder="Password repeat" name="pass_confirm" required>
+                <input id="register" class="btn btn-lg btn-primary btn-block" type="submit" name="register" value="Register">
+            </div>
           </form>
         </div>
         </div>
