@@ -29,6 +29,18 @@ var INIT = {
 				}
 			}, "json").fail(function() {});
 		});
+
+		$('#register').hover(function(){
+			$('#pass-group, #confirm-group').removeClass('has-success').removeClass('has-error');			
+			var password = $('#password').val();
+			var pass_confirm = $('#pass_confirm').val();
+			if(pass_confirm !== password){
+				$('#pass-group, #confirm-group').addClass('has-error');
+				setWarning("Passwords doesn't match.");
+			} else {
+				$('#pass-group, #confirm-group').addClass('has-success');
+			}
+		});
 	}
 }
 
